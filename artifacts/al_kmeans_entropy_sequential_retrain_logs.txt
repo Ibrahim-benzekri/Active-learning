@@ -1,0 +1,78 @@
+===== Active Learning (Hybrid Sequential) | KMeans -> Entropy =====
+device=cpu | repeats=3 | iters=5 | n_clusters=50
+
+==================== REPEAT 1/3 | seed=43 ====================
+iter 1/5 | target=892/4459
+  SMS_TEST acc=0.6484 prec_spam=0.2594 rec_spam=0.8792 f1_spam=0.4006
+
+iter 2/5 | target=1784/4459
+  SMS_TEST acc=0.7767 prec_spam=0.3611 rec_spam=0.8725 f1_spam=0.5108
+
+iter 3/5 | target=2675/4459
+  SMS_TEST acc=0.8314 prec_spam=0.4373 rec_spam=0.9128 f1_spam=0.5913
+
+iter 4/5 | target=3567/4459
+  SMS_TEST acc=0.8700 prec_spam=0.5073 rec_spam=0.9329 f1_spam=0.6572
+
+iter 5/5 | target=4459/4459
+  SMS_TEST acc=0.8924 prec_spam=0.5573 rec_spam=0.9463 f1_spam=0.7015
+
+==================== REPEAT 2/3 | seed=44 ====================
+iter 1/5 | target=892/4459
+  SMS_TEST acc=0.6054 prec_spam=0.2388 rec_spam=0.8926 f1_spam=0.3768
+
+iter 2/5 | target=1784/4459
+  SMS_TEST acc=0.7677 prec_spam=0.3560 rec_spam=0.9128 f1_spam=0.5122
+
+iter 3/5 | target=2675/4459
+  SMS_TEST acc=0.8359 prec_spam=0.4452 rec_spam=0.9262 f1_spam=0.6013
+
+iter 4/5 | target=3567/4459
+  SMS_TEST acc=0.8709 prec_spam=0.5092 rec_spam=0.9329 f1_spam=0.6588
+
+iter 5/5 | target=4459/4459
+  SMS_TEST acc=0.8771 prec_spam=0.5226 rec_spam=0.9329 f1_spam=0.6699
+
+==================== REPEAT 3/3 | seed=45 ====================
+iter 1/5 | target=892/4459
+  SMS_TEST acc=0.6538 prec_spam=0.2708 rec_spam=0.9396 f1_spam=0.4204
+
+iter 2/5 | target=1784/4459
+  SMS_TEST acc=0.7561 prec_spam=0.3466 rec_spam=0.9329 f1_spam=0.5055
+
+iter 3/5 | target=2675/4459
+  SMS_TEST acc=0.8206 prec_spam=0.4215 rec_spam=0.9195 f1_spam=0.5781
+
+iter 4/5 | target=3567/4459
+  SMS_TEST acc=0.8789 prec_spam=0.5263 rec_spam=0.9396 f1_spam=0.6747
+
+iter 5/5 | target=4459/4459
+  SMS_TEST acc=0.8834 prec_spam=0.5364 rec_spam=0.9396 f1_spam=0.6829
+
+==================== SUMMARY (mean + 95% CI) ====================
+iter 0/5 | labeled_SMS_target=223/4459 (0.05)
+  ACC mean=0.4547  CI95=[0.4353, 0.4741]  runs=['0.4601', '0.4583', '0.4457']
+  PREC(spam) mean=0.1837 CI95=[0.1706, 0.1968] runs=['0.1796', '0.1896', '0.1818']
+  REC(spam) mean=0.8949  CI95=[0.7944, 0.9954]  runs=['0.8523', '0.9329', '0.8993']
+  F1(spam) mean=0.3048   CI95=[0.2813, 0.3283]  runs=['0.2967', '0.3152', '0.3025']
+  
+iter 1/5
+  ACC mean=0.6359 CI95=[0.5699,0.7018] runs=['0.6484', '0.6054', '0.6538']
+  F1(spam) mean=0.3993 CI95=[0.3450,0.4536] runs=['0.4006', '0.3768', '0.4204']
+
+iter 2/5
+  ACC mean=0.7668 CI95=[0.7411,0.7925] runs=['0.7767', '0.7677', '0.7561']
+  F1(spam) mean=0.5095 CI95=[0.5006,0.5184] runs=['0.5108', '0.5122', '0.5055']
+
+iter 3/5
+  ACC mean=0.8293 CI95=[0.8098,0.8488] runs=['0.8314', '0.8359', '0.8206']
+  F1(spam) mean=0.5902 CI95=[0.5613,0.6192] runs=['0.5913', '0.6013', '0.5781']
+
+iter 4/5
+  ACC mean=0.8732 CI95=[0.8610,0.8855] runs=['0.8700', '0.8709', '0.8789']
+  F1(spam) mean=0.6636 CI95=[0.6395,0.6876] runs=['0.6572', '0.6588', '0.6747']
+
+iter 5/5
+  ACC mean=0.8843 CI95=[0.8653,0.9033] runs=['0.8924', '0.8771', '0.8834']
+  F1(spam) mean=0.6848 CI95=[0.6453,0.7242] runs=['0.7015', '0.6699', '0.6829']
+

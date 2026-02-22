@@ -1,0 +1,231 @@
+===== Retrain from scratch: EMAIL(train) + SMS_subset(train) =====
+Started at 2026-01-27 17:48:17
+device=cpu | repeats=3 | iters=5 | epochs=8 | lr=0.001 | batch_size=256
+TF-IDF is fit on EMAIL train only (stable across repeats).
+Evaluation is on SMS test only (fixed split, 20%).
+Sampler: WeightedRandomSampler (class balancing on combined train set).
+label_mapping: 0=ham, 1=spam
+
+==================== REPEAT 1/3 | seed=43 ====================
+[rep 1/3 | iter 1/5 | SMS_frac=0.2] TRAIN: EMAIL=50068 + SMS_subset=892 => total=50960 | train_counts ham/spam=[24495, 26465]
+  train_time_s=31.27 | SMS_TEST acc=0.6691 prec_spam=0.2689 recall_spam=0.8591 f1_spam=0.4096 f1_macro=0.5898 f1_weighted=0.7219
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9671    0.6398    0.7701       966
+               1     0.2689    0.8591    0.4096       149
+    
+        accuracy                         0.6691      1115
+       macro avg     0.6180    0.7494    0.5898      1115
+    weighted avg     0.8738    0.6691    0.7219      1115
+
+[rep 1/3 | iter 2/5 | SMS_frac=0.4] TRAIN: EMAIL=50068 + SMS_subset=1784 => total=51852 | train_counts ham/spam=[25267, 26585]
+  train_time_s=27.64 | SMS_TEST acc=0.7874 prec_spam=0.3771 recall_spam=0.9060 f1_spam=0.5325 f1_macro=0.6975 f1_weighted=0.8184
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9815    0.7692    0.8624       966
+               1     0.3771    0.9060    0.5325       149
+    
+        accuracy                         0.7874      1115
+       macro avg     0.6793    0.8376    0.6975      1115
+    weighted avg     0.9007    0.7874    0.8184      1115
+
+[rep 1/3 | iter 3/5 | SMS_frac=0.6] TRAIN: EMAIL=50068 + SMS_subset=2676 => total=52744 | train_counts ham/spam=[26039, 26705]
+  train_time_s=32.13 | SMS_TEST acc=0.8251 prec_spam=0.4286 recall_spam=0.9262 f1_spam=0.5860 f1_macro=0.7376 f1_weighted=0.8486
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9861    0.8095    0.8891       966
+               1     0.4286    0.9262    0.5860       149
+    
+        accuracy                         0.8251      1115
+       macro avg     0.7074    0.8678    0.7376      1115
+    weighted avg     0.9116    0.8251    0.8486      1115
+
+[rep 1/3 | iter 4/5 | SMS_frac=0.8] TRAIN: EMAIL=50068 + SMS_subset=3568 => total=53636 | train_counts ham/spam=[26811, 26825]
+  train_time_s=28.43 | SMS_TEST acc=0.8556 prec_spam=0.4789 recall_spam=0.9128 f1_spam=0.6282 f1_macro=0.7693 f1_weighted=0.8727
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9844    0.8468    0.9104       966
+               1     0.4789    0.9128    0.6282       149
+    
+        accuracy                         0.8556      1115
+       macro avg     0.7316    0.8798    0.7693      1115
+    weighted avg     0.9168    0.8556    0.8727      1115
+
+[rep 1/3 | iter 5/5 | SMS_frac=1.0] TRAIN: EMAIL=50068 + SMS_subset=4459 => total=54527 | train_counts ham/spam=[27583, 26944]
+  train_time_s=29.05 | SMS_TEST acc=0.8816 prec_spam=0.5331 recall_spam=0.9195 f1_spam=0.6749 f1_macro=0.8013 f1_weighted=0.8939
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9860    0.8758    0.9276       966
+               1     0.5331    0.9195    0.6749       149
+    
+        accuracy                         0.8816      1115
+       macro avg     0.7595    0.8976    0.8013      1115
+    weighted avg     0.9255    0.8816    0.8939      1115
+
+==================== REPEAT 2/3 | seed=44 ====================
+[rep 2/3 | iter 1/5 | SMS_frac=0.2] TRAIN: EMAIL=50068 + SMS_subset=892 => total=50960 | train_counts ham/spam=[24495, 26465]
+  train_time_s=30.99 | SMS_TEST acc=0.7085 prec_spam=0.3000 recall_spam=0.8859 f1_spam=0.4482 f1_macro=0.6251 f1_weighted=0.7547
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9748    0.6812    0.8020       966
+               1     0.3000    0.8859    0.4482       149
+    
+        accuracy                         0.7085      1115
+       macro avg     0.6374    0.7835    0.6251      1115
+    weighted avg     0.8846    0.7085    0.7547      1115
+
+[rep 2/3 | iter 2/5 | SMS_frac=0.4] TRAIN: EMAIL=50068 + SMS_subset=1784 => total=51852 | train_counts ham/spam=[25267, 26585]
+  train_time_s=30.15 | SMS_TEST acc=0.7955 prec_spam=0.3862 recall_spam=0.8993 f1_spam=0.5403 f1_macro=0.7044 f1_weighted=0.8247
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9805    0.7795    0.8685       966
+               1     0.3862    0.8993    0.5403       149
+    
+        accuracy                         0.7955      1115
+       macro avg     0.6833    0.8394    0.7044      1115
+    weighted avg     0.9011    0.7955    0.8247      1115
+
+[rep 2/3 | iter 3/5 | SMS_frac=0.6] TRAIN: EMAIL=50068 + SMS_subset=2676 => total=52744 | train_counts ham/spam=[26039, 26705]
+  train_time_s=31.44 | SMS_TEST acc=0.8135 prec_spam=0.4098 recall_spam=0.8993 f1_spam=0.5630 f1_macro=0.7222 f1_weighted=0.8389
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9810    0.8002    0.8814       966
+               1     0.4098    0.8993    0.5630       149
+    
+        accuracy                         0.8135      1115
+       macro avg     0.6954    0.8498    0.7222      1115
+    weighted avg     0.9046    0.8135    0.8389      1115
+
+[rep 2/3 | iter 4/5 | SMS_frac=0.8] TRAIN: EMAIL=50068 + SMS_subset=3568 => total=53636 | train_counts ham/spam=[26811, 26825]
+  train_time_s=21.85 | SMS_TEST acc=0.8628 prec_spam=0.4928 recall_spam=0.9195 f1_spam=0.6417 f1_macro=0.7784 f1_weighted=0.8786
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9857    0.8540    0.9151       966
+               1     0.4928    0.9195    0.6417       149
+    
+        accuracy                         0.8628      1115
+       macro avg     0.7392    0.8868    0.7784      1115
+    weighted avg     0.9198    0.8628    0.8786      1115
+
+[rep 2/3 | iter 5/5 | SMS_frac=1.0] TRAIN: EMAIL=50068 + SMS_subset=4459 => total=54527 | train_counts ham/spam=[27583, 26944]
+  train_time_s=22.11 | SMS_TEST acc=0.8789 prec_spam=0.5267 recall_spam=0.9262 f1_spam=0.6715 f1_macro=0.7987 f1_weighted=0.8918
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9871    0.8716    0.9258       966
+               1     0.5267    0.9262    0.6715       149
+    
+        accuracy                         0.8789      1115
+       macro avg     0.7569    0.8989    0.7987      1115
+    weighted avg     0.9256    0.8789    0.8918      1115
+
+==================== REPEAT 3/3 | seed=45 ====================
+[rep 3/3 | iter 1/5 | SMS_frac=0.2] TRAIN: EMAIL=50068 + SMS_subset=892 => total=50960 | train_counts ham/spam=[24495, 26465]
+  train_time_s=20.59 | SMS_TEST acc=0.6888 prec_spam=0.2857 recall_spam=0.8859 f1_spam=0.4321 f1_macro=0.6089 f1_weighted=0.7384
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9740    0.6584    0.7857       966
+               1     0.2857    0.8859    0.4321       149
+    
+        accuracy                         0.6888      1115
+       macro avg     0.6298    0.7721    0.6089      1115
+    weighted avg     0.8820    0.6888    0.7384      1115
+
+[rep 3/3 | iter 2/5 | SMS_frac=0.4] TRAIN: EMAIL=50068 + SMS_subset=1784 => total=51852 | train_counts ham/spam=[25267, 26585]
+  train_time_s=21.11 | SMS_TEST acc=0.7946 prec_spam=0.3876 recall_spam=0.9262 f1_spam=0.5465 f1_macro=0.7069 f1_weighted=0.8244
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9855    0.7743    0.8672       966
+               1     0.3876    0.9262    0.5465       149
+    
+        accuracy                         0.7946      1115
+       macro avg     0.6866    0.8503    0.7069      1115
+    weighted avg     0.9056    0.7946    0.8244      1115
+
+[rep 3/3 | iter 3/5 | SMS_frac=0.6] TRAIN: EMAIL=50068 + SMS_subset=2676 => total=52744 | train_counts ham/spam=[26039, 26705]
+  train_time_s=26.46 | SMS_TEST acc=0.8323 prec_spam=0.4383 recall_spam=0.9060 f1_spam=0.5908 f1_macro=0.7427 f1_weighted=0.8539
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9827    0.8209    0.8945       966
+               1     0.4383    0.9060    0.5908       149
+    
+        accuracy                         0.8323      1115
+       macro avg     0.7105    0.8635    0.7427      1115
+    weighted avg     0.9099    0.8323    0.8539      1115
+
+[rep 3/3 | iter 4/5 | SMS_frac=0.8] TRAIN: EMAIL=50068 + SMS_subset=3568 => total=53636 | train_counts ham/spam=[26811, 26825]
+  train_time_s=33.77 | SMS_TEST acc=0.8404 prec_spam=0.4531 recall_spam=0.9396 f1_spam=0.6114 f1_macro=0.7555 f1_weighted=0.8610
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9888    0.8251    0.8995       966
+               1     0.4531    0.9396    0.6114       149
+    
+        accuracy                         0.8404      1115
+       macro avg     0.7210    0.8823    0.7555      1115
+    weighted avg     0.9172    0.8404    0.8610      1115
+
+[rep 3/3 | iter 5/5 | SMS_frac=1.0] TRAIN: EMAIL=50068 + SMS_subset=4459 => total=54527 | train_counts ham/spam=[27583, 26944]
+  train_time_s=33.06 | SMS_TEST acc=0.8942 prec_spam=0.5638 recall_spam=0.9195 f1_spam=0.6990 f1_macro=0.8174 f1_weighted=0.9042
+  Classification report:
+                  precision    recall  f1-score   support
+    
+               0     0.9862    0.8903    0.9358       966
+               1     0.5638    0.9195    0.6990       149
+    
+        accuracy                         0.8942      1115
+       macro avg     0.7750    0.9049    0.8174      1115
+    weighted avg     0.9298    0.8942    0.9042      1115
+
+==================== SUMMARY over repeats (mean + 95% CI) ====================
+Metrics computed on SMS TEST only. CI95 uses Student t (n=3 => t=4.303).
+
+iter 0/5 | labeled_SMS_target=223/4459 (0.05)
+  ACC mean=0.4978  CI95=[0.4671, 0.5284]  runs=['0.5004', '0.5085', '0.4843']
+  PREC(spam) mean=0.1910 CI95=[0.1830, 0.1989] runs=['0.1946', '0.1897', '0.1886']
+  REC(spam) mean=0.8523  CI95=[0.7797, 0.9250]  runs=['0.8725', '0.8188', '0.8658']
+  F1(spam) mean=0.3120   CI95=[0.2985, 0.3256]  runs=['0.3182', '0.3081', '0.3097']
+
+iter 1/5 | SMS_frac=0.2
+  ACC mean=0.6888  CI95=[0.6398, 0.7378]   runs=['0.6691', '0.7085', '0.6888']
+  PREC(spam) mean=0.2849 CI95=[0.2462, 0.3235] runs=['0.2689', '0.3000', '0.2857']
+  REC(spam) mean=0.8770  CI95=[0.8385, 0.9155]   runs=['0.8591', '0.8859', '0.8859']
+  F1(spam) mean=0.4300   CI95=[0.3818, 0.4781]   runs=['0.4096', '0.4482', '0.4321']
+
+iter 2/5 | SMS_frac=0.4
+  ACC mean=0.7925  CI95=[0.7815, 0.8035]   runs=['0.7874', '0.7955', '0.7946']
+  PREC(spam) mean=0.3836 CI95=[0.3694, 0.3978] runs=['0.3771', '0.3862', '0.3876']
+  REC(spam) mean=0.9105  CI95=[0.8758, 0.9452]   runs=['0.9060', '0.8993', '0.9262']
+  F1(spam) mean=0.5398   CI95=[0.5224, 0.5572]   runs=['0.5325', '0.5403', '0.5465']
+
+iter 3/5 | SMS_frac=0.6
+  ACC mean=0.8236  CI95=[0.8000, 0.8472]   runs=['0.8251', '0.8135', '0.8323']
+  PREC(spam) mean=0.4256 CI95=[0.3895, 0.4616] runs=['0.4286', '0.4098', '0.4383']
+  REC(spam) mean=0.9105  CI95=[0.8758, 0.9452]   runs=['0.9262', '0.8993', '0.9060']
+  F1(spam) mean=0.5799   CI95=[0.5431, 0.6168]   runs=['0.5860', '0.5630', '0.5908']
+
+iter 4/5 | SMS_frac=0.8
+  ACC mean=0.8529  CI95=[0.8245, 0.8814]   runs=['0.8556', '0.8628', '0.8404']
+  PREC(spam) mean=0.4749 CI95=[0.4248, 0.5250] runs=['0.4789', '0.4928', '0.4531']
+  REC(spam) mean=0.9239  CI95=[0.8892, 0.9586]   runs=['0.9128', '0.9195', '0.9396']
+  F1(spam) mean=0.6271   CI95=[0.5893, 0.6648]   runs=['0.6282', '0.6417', '0.6114']
+
+iter 5/5 | SMS_frac=1.0
+  ACC mean=0.8849  CI95=[0.8647, 0.9051]   runs=['0.8816', '0.8789', '0.8942']
+  PREC(spam) mean=0.5412 CI95=[0.4919, 0.5904] runs=['0.5331', '0.5267', '0.5638']
+  REC(spam) mean=0.9217  CI95=[0.9121, 0.9313]   runs=['0.9195', '0.9262', '0.9195']
+  F1(spam) mean=0.6818   CI95=[0.6446, 0.7190]   runs=['0.6749', '0.6715', '0.6990']
+
+Finished at 2026-01-27 17:56:46
